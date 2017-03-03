@@ -57,6 +57,11 @@ typedef void (^MTCallOperationCompletion)(BOOL success, NSError *error);
 - (void)mute;
 
 /**
+ * Switch to loud speaker
+ */
+- (void)speaker:(BOOL)speakerOn;
+
+/**
  * Hangs up the call
  */
 - (void)hangUp;

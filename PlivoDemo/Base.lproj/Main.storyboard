@@ -83,6 +83,9 @@
                                     <constraint firstAttribute="width" constant="72" id="Vgf-rJ-5oB"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="call-mute"/>
+                                <connections>
+                                    <action selector="muteCallButtonClicked:" destination="frK-Io-WsF" eventType="touchUpInside" id="aBr-Gh-gQx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHm-Kq-NYH">
                                 <rect key="frame" x="243" y="228" width="72" height="72"/>
@@ -91,6 +94,9 @@
                                     <constraint firstAttribute="height" constant="72" id="SSM-a2-5Ym"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="call-speaker"/>
+                                <connections>
+                                    <action selector="speakerButtonClicked:" destination="frK-Io-WsF" eventType="touchUpInside" id="OVk-2E-vKB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTj-cA-8Kk">
                                 <rect key="frame" x="151" y="228" width="72" height="72"/>

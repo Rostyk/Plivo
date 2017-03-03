@@ -107,7 +107,7 @@ static MTCallManager *_manager = nil;
     }
 }
 
-- (void)speaker {
+- (void)speaker:(BOOL)speakerOn {
     /*for (PlivoOutgoing *callLeg in self.callLegs) {
         [callLeg switchOutputToSpeaker];
     }*/

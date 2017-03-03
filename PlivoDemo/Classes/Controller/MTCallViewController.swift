@@ -19,7 +19,8 @@ class MTCallViewController: UIViewController {
     
     var recipient: MTContact!
     
-    // MARK - Lifycycle
+    // MARK: - Lifycycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +41,24 @@ class MTCallViewController: UIViewController {
         
     }
     
+    // MARK: - UI outlet event handlers
+    
+    @IBAction func muteCallButtonClicked(_ sender: Any) {
+        MTCallManager.shared().mute()
+    }
+    
+    @IBAction func speakerButtonClicked(_ sender: Any) {
+        MTCallManager.shared().speaker(true)
+    }
+    
+    @IBAction func rejectCallButtonClicked(_ sender: Any) {
+        MTCallManager.shared().hangUp()
+       
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: Main calling actions
+    
     func callRecipient() {
         MTCallManager.shared().makeCall(recipient) { [weak self] (success, error) in
             if let error = error {
@@ -50,13 +69,6 @@ class MTCallViewController: UIViewController {
             }
         }
     }
-    
-    // MARK: - UI outlet event handlers
-    @IBAction func rejectCallButtonClicked(_ sender: Any) {
-        MTCallManager.shared().hangUp()
-        MTCallManager.shared().delegate = nil
-        self.dismiss(animated: true, completion: nil)
-    }
 }
 
 extension MTCallViewController : CallDelegate {
@@ -64,8 +76,10 @@ extension MTCallViewController : CallDelegate {
         self.appendLog("[Plivo] Endpoint logged in\n")
         self.callStatusLabel.text = "Dialing..."
 
+        /*This is very ugly but Plivo SDK has a bug with concurremcy which doesn't allow
+         * to use GCD (any dispatch_async) here*/
         DispatchQueue.main.async {
-            self.constructOutCall()
+            self.callRecipient()
         }
     }
     
@@ -105,11 +119,5 @@ extension MTCallViewController : CallDelegate {
         DispatchQueue.main.async {
             self.logTextView.text =  (self.logTextView.text)! + log
         }
-    }
-    
-    /*This is very ugle but PLivo SDK has a bug with concurremcy which doesn't allow 
-     * to use GCD (any dispatch_async) here*/
-    func constructOutCall() {
-        self.perform(#selector(callRecipient), with: nil, afterDelay: 0.4)
     }
 }
