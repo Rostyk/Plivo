@@ -30,10 +30,17 @@ class MTCallViewController: UIViewController {
         self.recipientLabel.text = self.recipient.getPrimaryPhone()
         
         MTCallManager.shared().delegate = self
-        MTCallManager.shared().prepare()
+        
+        if (MTCallManager.shared().prepared) {
+            callRecipient()
+        }
+        else {
+           MTCallManager.shared().prepare()
+        }
+        
     }
     
-    func callRecipient( ) {
+    func callRecipient() {
         MTCallManager.shared().makeCall(recipient) { [weak self] (success, error) in
             if let error = error {
                 self?.logTextView.text = (self?.logTextView.text)!  + error.localizedDescription
@@ -47,7 +54,7 @@ class MTCallViewController: UIViewController {
     // MARK: - UI outlet event handlers
     @IBAction func rejectCallButtonClicked(_ sender: Any) {
         MTCallManager.shared().hangUp()
-        
+        MTCallManager.shared().delegate = nil
         self.dismiss(animated: true, completion: nil)
     }
 }
@@ -58,7 +65,7 @@ extension MTCallViewController : CallDelegate {
         self.callStatusLabel.text = "Dialing..."
 
         DispatchQueue.main.async {
-            self.outCallReceived()
+            self.constructOutCall()
         }
     }
     
@@ -102,7 +109,7 @@ extension MTCallViewController : CallDelegate {
     
     /*This is very ugle but PLivo SDK has a bug with concurremcy which doesn't allow 
      * to use GCD (any dispatch_async) here*/
-    func outCallReceived() {
+    func constructOutCall() {
         self.perform(#selector(callRecipient), with: nil, afterDelay: 0.4)
     }
 }

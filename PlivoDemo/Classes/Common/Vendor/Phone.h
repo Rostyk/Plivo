@@ -20,8 +20,4 @@
 /* set delegate for plivo endpoint object */
 - (void)setDelegate:(id)delegate;
 
-- (void) enableAudio;
-
-- (void) disableAudio;
-
 @end

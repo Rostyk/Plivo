@@ -17,16 +17,18 @@ typedef void (^MTCallOperationCompletion)(BOOL success, NSError *error);
 - (void)onLogin;
 - (void)onLoginFailed;
 - (void)onOutgoingCallAnswered:(PlivoOutgoing *)call;
-/*- (void)onOutgoingCallHangup:(PlivoOutgoing *)call;
+- (void)onOutgoingCallHangup:(PlivoOutgoing *)call;
 - (void)onCalling:(PlivoOutgoing *)call;
 - (void)onOutgoingCallRinging:(PlivoOutgoing *)call;
 - (void)onOutgoingCallRejected:(PlivoOutgoing *)call;
-- (void)onOutgoingCallInvalid:(PlivoOutgoing *)call;*/
+- (void)onOutgoingCallInvalid:(PlivoOutgoing *)call;
 @end
 
 @interface MTCallManager : NSObject
 @property (nonatomic, strong, readonly) Phone *phone;
 @property (nonatomic, weak) id<CallDelegate> delegate;
+
+@property (nonatomic) BOOL prepared;
 
 /**
  * Get the shared instance of the call manager

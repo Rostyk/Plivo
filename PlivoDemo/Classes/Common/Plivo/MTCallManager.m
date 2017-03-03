@@ -60,8 +60,6 @@ static MTCallManager *_manager = nil;
                                            andHeaders:extraHeaders];
     [self.callLegs addObject:callLeg];
     
-    //dispatch_async(dispatch_get_main_queue(), ^{
-    
     if (!callLeg) {
         NSError *error = [MTErrorBuilder errorWithReason:@"Call failed"
                                                  message:@"Calleg not crated by Plivo"];
@@ -76,6 +74,8 @@ static MTCallManager *_manager = nil;
     for (PlivoOutgoing *callLeg in self.callLegs) {
         [callLeg hangup];
     }
+    
+    [self.callLegs removeAllObjects];
 }
 
 - (void)disableAudio {
@@ -115,6 +115,7 @@ static MTCallManager *_manager = nil;
 
 - (void)prepare {
     [self.phone login];
+    _prepared = true;
 }
 
 
