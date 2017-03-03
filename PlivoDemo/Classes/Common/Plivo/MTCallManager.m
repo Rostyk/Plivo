@@ -51,23 +51,27 @@ static MTCallManager *_manager = nil;
         });
     }
     
-    /* set extra headers */
-    NSDictionary *extraHeaders = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                  @"Value1", @"X-PH-Header1",
-                                  @"Value2", @"X-PH-Header2",
-                                  nil];
-    PlivoOutgoing *callLeg = [self.phone callWithDest:contact.getPrimaryPhone
-                                           andHeaders:extraHeaders];
-    [self.callLegs addObject:callLeg];
-    
-    if (!callLeg) {
-        NSError *error = [MTErrorBuilder errorWithReason:@"Call failed"
-                                                 message:@"Calleg not crated by Plivo"];
-        completion(false, error);
-    }
-    else {
-        completion(true, nil);
-    }
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        /* set extra headers */
+        NSDictionary *extraHeaders = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                      @"Value1", @"X-PH-Header1",
+                                      @"Value2", @"X-PH-Header2",
+                                      nil];
+        PlivoOutgoing *callLeg = [self.phone callWithDest:contact.getPrimaryPhone
+                                               andHeaders:extraHeaders];
+        [self.callLegs addObject:callLeg];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (!callLeg) {
+                NSError *error = [MTErrorBuilder errorWithReason:@"Call failed"
+                                                         message:@"Calleg not crated by Plivo"];
+                completion(false, error);
+            }
+            else {
+                completion(true, nil);
+            }
+        });
+    });
 }
 
 - (void)hangUp {

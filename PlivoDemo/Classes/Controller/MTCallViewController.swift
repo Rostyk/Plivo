@@ -41,6 +41,19 @@ class MTCallViewController: UIViewController {
         
     }
     
+    // MARK: Main calling actions
+    
+    func callRecipient() {
+        MTCallManager.shared().makeCall(recipient) { [weak self] (success, error) in
+            if let error = error {
+                self?.appendLog(error.localizedDescription)
+            }
+            else {
+                self?.appendLog("Call started\n")
+            }
+        }
+    }
+    
     // MARK: - UI outlet event handlers
     
     @IBAction func muteCallButtonClicked(_ sender: Any) {
@@ -56,68 +69,48 @@ class MTCallViewController: UIViewController {
        
         self.dismiss(animated: true, completion: nil)
     }
-    
-    // MARK: Main calling actions
-    
-    func callRecipient() {
-        MTCallManager.shared().makeCall(recipient) { [weak self] (success, error) in
-            if let error = error {
-                self?.logTextView.text = (self?.logTextView.text)!  + error.localizedDescription
-            }
-            else {
-                self?.logTextView.text =  (self?.logTextView.text)!  + "[Plivo] Call started\n"
-            }
-        }
-    }
 }
 
 extension MTCallViewController : CallDelegate {
     func onLogin() {
-        self.appendLog("[Plivo] Endpoint logged in\n")
-        self.callStatusLabel.text = "Dialing..."
+        self.appendLog("Endpoint logged in\n")
 
-        /*This is very ugly but Plivo SDK has a bug with concurremcy which doesn't allow
-         * to use GCD (any dispatch_async) here*/
-        DispatchQueue.main.async {
-            self.callRecipient()
-        }
+        
+        self.callRecipient()
     }
     
     func onLoginFailed() {
-        self.appendLog("[Plivo] Endpoint loggin failed\n")
+        self.appendLog("Endpoint loggin failed\n")
     }
     
     func onOutgoingCallAnswered(_ call: PlivoOutgoing) {
-        self.appendLog("[Plivo] Call answered\n")
+        self.appendLog("Call answered\n")
     }
     
     func onOutgoingCallHangup(_ call: PlivoOutgoing) {
-        self.appendLog("[Plivo] Call hung up\n")
+        self.appendLog("Call hung up\n")
     }
     
     func onCalling(_ call: PlivoOutgoing) {
-        self.appendLog("[Plivo] Calling...\n")
-        self.callStatusLabel.text = "Calling..."
+        self.appendLog("Calling...\n")
     }
     
     func onOutgoingCallRinging(_ call: PlivoOutgoing) {
-        self.appendLog("[Plivo] Calling ringing\n")
-        self.callStatusLabel.text = "Call ringing"
+        self.appendLog("Calling ringing\n")
     }
     
     func onOutgoingCallRejected(_ call: PlivoOutgoing) {
-        self.appendLog("[Plivo] Call rejected\n")
-        self.callStatusLabel.text = "Call rejected"
+        self.appendLog("Call rejected\n")
     }
     
     func onOutgoingCallInvalid(_ call: PlivoOutgoing) {
-        self.appendLog("[Plivo] Invalid call\n")
-        self.callStatusLabel.text = "Invlid call"
+        self.appendLog("Invalid call\n")
     }
 
     func appendLog(_ log: String) {
         DispatchQueue.main.async {
-            self.logTextView.text =  (self.logTextView.text)! + log
+            self.logTextView.text = (self.logTextView.text)! + "[Plivo]" + log
+            self.callStatusLabel.text = log
         }
     }
 }

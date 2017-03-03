@@ -30,7 +30,7 @@ extension MTHomeViewController : MTPickerDelegate {
         let callController = storyboard.instantiateViewController(withIdentifier: "MTCallViewController") as! MTCallViewController
         callController.recipient = contact
         
-        self.present(callController, animated: true, completion: nil)
+        self.navigationController?.present(callController, animated: true, completion: nil)
     }
     
     func epContactPicker(_: MTContactsViewController, didCancel error: NSError) {
