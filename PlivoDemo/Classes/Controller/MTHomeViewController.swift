@@ -26,7 +26,11 @@ extension MTHomeViewController : MTPickerDelegate {
     }
     
     func epContactPicker(_: MTContactsViewController, didSelectContact contact: MTContact) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let callController = storyboard.instantiateViewController(withIdentifier: "MTCallViewController") as! MTCallViewController
+        callController.recipient = contact
         
+        self.present(callController, animated: true, completion: nil)
     }
     
     func epContactPicker(_: MTContactsViewController, didCancel error: NSError) {

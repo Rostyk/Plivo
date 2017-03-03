@@ -9,9 +9,12 @@
 #import "Phone.h"
 #import "PlivoEndpoint.h"
 
+@interface Phone()
+@property (nonatomic, strong) PlivoOutgoing *outCall;
+@end
+
 @implementation Phone {
     PlivoEndpoint *endpoint;
-	PlivoOutgoing *outCall;
 }
 
 - (id) init
@@ -38,12 +41,12 @@
     NSString *sipUri = [[NSString alloc]initWithFormat:@"sip:%@@phone.plivo.com", dest];
     
     /* create PlivoOutgoing object */
-    outCall = [endpoint createOutgoingCall];
+    self.outCall = [endpoint createOutgoingCall];
     
     /* do the call */
-    [outCall call:sipUri headers:headers];
+    [self.outCall call:sipUri headers:headers];
     
-    return outCall;
+    return self.outCall;
 }
 
 - (void)setDelegate:(id)delegate
@@ -52,11 +55,11 @@
 }
 
 - (void) disableAudio{
-	[outCall hold];
+	[self.outCall hold];
 }
 
 - (void) enableAudio{
-	[outCall unhold];
+	[self.outCall unhold];
 }
 
 @end

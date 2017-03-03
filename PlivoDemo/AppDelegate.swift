@@ -14,16 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
         return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-        MTCallManager.shared().disableAudio();
+        //MTCallManager.shared().disableAudio();
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        MTCallManager.shared().restoreAudio();
+        //MTCallManager.shared().restoreAudio();
     }
 
 }

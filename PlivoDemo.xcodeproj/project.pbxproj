@@ -19,7 +19,8 @@
 		47C7CFD61E699FB200BA185D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C7CFD41E699FB200BA185D /* AudioToolbox.framework */; };
 		47C7CFD71E699FB200BA185D /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C7CFD51E699FB200BA185D /* CoreAudio.framework */; };
 		47C7CFDC1E69A16300BA185D /* MTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C7CFDB1E69A16300BA185D /* MTConstants.swift */; };
-		47C7CFE41E69A3AB00BA185D /* MTCallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C7CFE31E69A3AB00BA185D /* MTCallManager.m */; };
+		47C7CFED1E69AAC800BA185D /* MTCallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C7CFEB1E69AAC800BA185D /* MTCallManager.m */; };
+		47C7CFF01E69AD3B00BA185D /* MTErrorBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C7CFEF1E69AD3B00BA185D /* MTErrorBuilder.m */; };
 		47EEAA211E6996EC00F03582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EEAA201E6996EC00F03582 /* AppDelegate.swift */; };
 		47EEAA261E6996EC00F03582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47EEAA241E6996EC00F03582 /* Main.storyboard */; };
 		47EEAA2B1E6996EC00F03582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47EEAA291E6996EC00F03582 /* LaunchScreen.storyboard */; };
@@ -48,8 +49,10 @@
 		47C7CFD51E699FB200BA185D /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		47C7CFDA1E69A0D600BA185D /* PlivoDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PlivoDemo-Bridging-Header.h"; path = "Classes/PlivoDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		47C7CFDB1E69A16300BA185D /* MTConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MTConstants.swift; path = Contacts/MTConstants.swift; sourceTree = "<group>"; };
-		47C7CFE21E69A3AB00BA185D /* MTCallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTCallManager.h; path = Vendor/Plivo/MTCallManager.h; sourceTree = "<group>"; };
-		47C7CFE31E69A3AB00BA185D /* MTCallManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTCallManager.m; path = Vendor/Plivo/MTCallManager.m; sourceTree = "<group>"; };
+		47C7CFEA1E69AAC800BA185D /* MTCallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTCallManager.h; path = Plivo/MTCallManager.h; sourceTree = "<group>"; };
+		47C7CFEB1E69AAC800BA185D /* MTCallManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTCallManager.m; path = Plivo/MTCallManager.m; sourceTree = "<group>"; };
+		47C7CFEE1E69AD3B00BA185D /* MTErrorBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTErrorBuilder.h; path = Plivo/MTErrorBuilder.h; sourceTree = "<group>"; };
+		47C7CFEF1E69AD3B00BA185D /* MTErrorBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTErrorBuilder.m; path = Plivo/MTErrorBuilder.m; sourceTree = "<group>"; };
 		47EEAA1D1E6996EC00F03582 /* PlivoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlivoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47EEAA201E6996EC00F03582 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47EEAA251E6996EC00F03582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -132,8 +135,10 @@
 		47C7CFDD1E69A16900BA185D /* Plivo */ = {
 			isa = PBXGroup;
 			children = (
-				47C7CFE21E69A3AB00BA185D /* MTCallManager.h */,
-				47C7CFE31E69A3AB00BA185D /* MTCallManager.m */,
+				47C7CFEA1E69AAC800BA185D /* MTCallManager.h */,
+				47C7CFEB1E69AAC800BA185D /* MTCallManager.m */,
+				47C7CFEE1E69AD3B00BA185D /* MTErrorBuilder.h */,
+				47C7CFEF1E69AD3B00BA185D /* MTErrorBuilder.m */,
 			);
 			name = Plivo;
 			sourceTree = "<group>";
@@ -300,11 +305,12 @@
 				47C7CFDC1E69A16300BA185D /* MTConstants.swift in Sources */,
 				47EEAA421E69977100F03582 /* MTHomeViewController.swift in Sources */,
 				47EEAA411E69977100F03582 /* MTContactsViewController.swift in Sources */,
+				47C7CFF01E69AD3B00BA185D /* MTErrorBuilder.m in Sources */,
 				47EEAA441E69977100F03582 /* MTContactCell.swift in Sources */,
 				47EEAA3F1E69977100F03582 /* MTExtensions.swift in Sources */,
 				47EEAA401E69977100F03582 /* MTCallViewController.swift in Sources */,
+				47C7CFED1E69AAC800BA185D /* MTCallManager.m in Sources */,
 				47EEAA211E6996EC00F03582 /* AppDelegate.swift in Sources */,
-				47C7CFE41E69A3AB00BA185D /* MTCallManager.m in Sources */,
 				47EEAA431E69977100F03582 /* MTContact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
