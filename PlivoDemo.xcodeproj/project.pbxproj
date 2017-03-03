@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47C7CFBF1E699A1C00BA185D /* libPlivoEndpoint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C7CFBE1E699A1C00BA185D /* libPlivoEndpoint.a */; };
+		47C7CFC41E699B7D00BA185D /* Phone.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C7CFC31E699B7D00BA185D /* Phone.m */; };
+		47C7CFC71E699F7A00BA185D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C7CFC61E699F7A00BA185D /* Security.framework */; };
+		47C7CFC91E699F7E00BA185D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C7CFC81E699F7E00BA185D /* SystemConfiguration.framework */; };
+		47C7CFCB1E699F8E00BA185D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C7CFCA1E699F8E00BA185D /* CoreMedia.framework */; };
+		47C7CFCD1E699F9200BA185D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C7CFCC1E699F9200BA185D /* OpenGLES.framework */; };
+		47C7CFCF1E699F9D00BA185D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C7CFCE1E699F9D00BA185D /* QuartzCore.framework */; };
+		47C7CFD11E699FA100BA185D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C7CFD01E699FA100BA185D /* AVFoundation.framework */; };
+		47C7CFD31E699FA600BA185D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C7CFD21E699FA600BA185D /* CFNetwork.framework */; };
+		47C7CFD61E699FB200BA185D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C7CFD41E699FB200BA185D /* AudioToolbox.framework */; };
+		47C7CFD71E699FB200BA185D /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C7CFD51E699FB200BA185D /* CoreAudio.framework */; };
+		47C7CFDC1E69A16300BA185D /* MTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C7CFDB1E69A16300BA185D /* MTConstants.swift */; };
+		47C7CFE41E69A3AB00BA185D /* MTCallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C7CFE31E69A3AB00BA185D /* MTCallManager.m */; };
+		47EEAA211E6996EC00F03582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EEAA201E6996EC00F03582 /* AppDelegate.swift */; };
+		47EEAA261E6996EC00F03582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47EEAA241E6996EC00F03582 /* Main.storyboard */; };
+		47EEAA2B1E6996EC00F03582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47EEAA291E6996EC00F03582 /* LaunchScreen.storyboard */; };
+		47EEAA3F1E69977100F03582 /* MTExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EEAA341E69977100F03582 /* MTExtensions.swift */; };
+		47EEAA401E69977100F03582 /* MTCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EEAA361E69977100F03582 /* MTCallViewController.swift */; };
+		47EEAA411E69977100F03582 /* MTContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EEAA371E69977100F03582 /* MTContactsViewController.swift */; };
+		47EEAA421E69977100F03582 /* MTHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EEAA381E69977100F03582 /* MTHomeViewController.swift */; };
+		47EEAA431E69977100F03582 /* MTContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EEAA3A1E69977100F03582 /* MTContact.swift */; };
+		47EEAA441E69977100F03582 /* MTContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EEAA3C1E69977100F03582 /* MTContactCell.swift */; };
+		47EEAA451E69977100F03582 /* MTContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47EEAA3D1E69977100F03582 /* MTContactCell.xib */; };
+		47EEAA481E6997EB00F03582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47EEAA471E6997EB00F03582 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		47C7CFBE1E699A1C00BA185D /* libPlivoEndpoint.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPlivoEndpoint.a; path = PlivoDemo/Classes/Common/Vendor/libPlivoEndpoint.a; sourceTree = "<group>"; };
+		47C7CFC21E699B7D00BA185D /* Phone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Phone.h; path = Vendor/Phone.h; sourceTree = "<group>"; };
+		47C7CFC31E699B7D00BA185D /* Phone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Phone.m; path = Vendor/Phone.m; sourceTree = "<group>"; };
+		47C7CFC61E699F7A00BA185D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		47C7CFC81E699F7E00BA185D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		47C7CFCA1E699F8E00BA185D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		47C7CFCC1E699F9200BA185D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		47C7CFCE1E699F9D00BA185D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		47C7CFD01E699FA100BA185D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		47C7CFD21E699FA600BA185D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		47C7CFD41E699FB200BA185D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		47C7CFD51E699FB200BA185D /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		47C7CFDA1E69A0D600BA185D /* PlivoDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PlivoDemo-Bridging-Header.h"; path = "Classes/PlivoDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		47C7CFDB1E69A16300BA185D /* MTConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MTConstants.swift; path = Contacts/MTConstants.swift; sourceTree = "<group>"; };
+		47C7CFE21E69A3AB00BA185D /* MTCallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTCallManager.h; path = Vendor/Plivo/MTCallManager.h; sourceTree = "<group>"; };
+		47C7CFE31E69A3AB00BA185D /* MTCallManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTCallManager.m; path = Vendor/Plivo/MTCallManager.m; sourceTree = "<group>"; };
+		47EEAA1D1E6996EC00F03582 /* PlivoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlivoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47EEAA201E6996EC00F03582 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		47EEAA251E6996EC00F03582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		47EEAA2A1E6996EC00F03582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		47EEAA2C1E6996EC00F03582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47EEAA341E69977100F03582 /* MTExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTExtensions.swift; sourceTree = "<group>"; };
+		47EEAA361E69977100F03582 /* MTCallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTCallViewController.swift; sourceTree = "<group>"; };
+		47EEAA371E69977100F03582 /* MTContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTContactsViewController.swift; sourceTree = "<group>"; };
+		47EEAA381E69977100F03582 /* MTHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTHomeViewController.swift; sourceTree = "<group>"; };
+		47EEAA3A1E69977100F03582 /* MTContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTContact.swift; sourceTree = "<group>"; };
+		47EEAA3C1E69977100F03582 /* MTContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTContactCell.swift; sourceTree = "<group>"; };
+		47EEAA3D1E69977100F03582 /* MTContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTContactCell.xib; sourceTree = "<group>"; };
+		47EEAA471E6997EB00F03582 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47EEAA1A1E6996EC00F03582 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C7CFD61E699FB200BA185D /* AudioToolbox.framework in Frameworks */,
+				47C7CFD71E699FB200BA185D /* CoreAudio.framework in Frameworks */,
+				47C7CFD31E699FA600BA185D /* CFNetwork.framework in Frameworks */,
+				47C7CFD11E699FA100BA185D /* AVFoundation.framework in Frameworks */,
+				47C7CFCF1E699F9D00BA185D /* QuartzCore.framework in Frameworks */,
+				47C7CFCD1E699F9200BA185D /* OpenGLES.framework in Frameworks */,
+				47C7CFCB1E699F8E00BA185D /* CoreMedia.framework in Frameworks */,
+				47C7CFC91E699F7E00BA185D /* SystemConfiguration.framework in Frameworks */,
+				47C7CFC71E699F7A00BA185D /* Security.framework in Frameworks */,
+				47C7CFBF1E699A1C00BA185D /* libPlivoEndpoint.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47C7CFC01E699B6E00BA185D /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				47C7CFC21E699B7D00BA185D /* Phone.h */,
+				47C7CFC31E699B7D00BA185D /* Phone.m */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		47C7CFC51E699F7A00BA185D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47C7CFBE1E699A1C00BA185D /* libPlivoEndpoint.a */,
+				47C7CFD41E699FB200BA185D /* AudioToolbox.framework */,
+				47C7CFD51E699FB200BA185D /* CoreAudio.framework */,
+				47C7CFD21E699FA600BA185D /* CFNetwork.framework */,
+				47C7CFD01E699FA100BA185D /* AVFoundation.framework */,
+				47C7CFCE1E699F9D00BA185D /* QuartzCore.framework */,
+				47C7CFCC1E699F9200BA185D /* OpenGLES.framework */,
+				47C7CFCA1E699F8E00BA185D /* CoreMedia.framework */,
+				47C7CFC81E699F7E00BA185D /* SystemConfiguration.framework */,
+				47C7CFC61E699F7A00BA185D /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47C7CFD81E699FDC00BA185D /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				47C7CFDB1E69A16300BA185D /* MTConstants.swift */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
+		47C7CFD91E69A08E00BA185D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47C7CFDA1E69A0D600BA185D /* PlivoDemo-Bridging-Header.h */,
+				47EEAA2C1E6996EC00F03582 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47C7CFDD1E69A16900BA185D /* Plivo */ = {
+			isa = PBXGroup;
+			children = (
+				47C7CFE21E69A3AB00BA185D /* MTCallManager.h */,
+				47C7CFE31E69A3AB00BA185D /* MTCallManager.m */,
+			);
+			name = Plivo;
+			sourceTree = "<group>";
+		};
+		47EEAA141E6996EC00F03582 = {
+			isa = PBXGroup;
+			children = (
+				47EEAA1F1E6996EC00F03582 /* PlivoDemo */,
+				47EEAA1E1E6996EC00F03582 /* Products */,
+				47C7CFC51E699F7A00BA185D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		47EEAA1E1E6996EC00F03582 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47EEAA1D1E6996EC00F03582 /* PlivoDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47EEAA1F1E6996EC00F03582 /* PlivoDemo */ = {
+			isa = PBXGroup;
+			children = (
+				47C7CFD91E69A08E00BA185D /* Supporting Files */,
+				47EEAA321E69977100F03582 /* Common */,
+				47EEAA351E69977100F03582 /* Controller */,
+				47EEAA391E69977100F03582 /* Model */,
+				47EEAA3B1E69977100F03582 /* View */,
+				47EEAA201E6996EC00F03582 /* AppDelegate.swift */,
+				47EEAA241E6996EC00F03582 /* Main.storyboard */,
+				47EEAA461E6997E200F03582 /* Resources */,
+			);
+			path = PlivoDemo;
+			sourceTree = "<group>";
+		};
+		47EEAA321E69977100F03582 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				47C7CFDD1E69A16900BA185D /* Plivo */,
+				47C7CFD81E699FDC00BA185D /* Contacts */,
+				47C7CFC01E699B6E00BA185D /* Vendor */,
+				47EEAA341E69977100F03582 /* MTExtensions.swift */,
+			);
+			name = Common;
+			path = Classes/Common;
+			sourceTree = "<group>";
+		};
+		47EEAA351E69977100F03582 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				47EEAA361E69977100F03582 /* MTCallViewController.swift */,
+				47EEAA371E69977100F03582 /* MTContactsViewController.swift */,
+				47EEAA381E69977100F03582 /* MTHomeViewController.swift */,
+			);
+			name = Controller;
+			path = Classes/Controller;
+			sourceTree = "<group>";
+		};
+		47EEAA391E69977100F03582 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				47EEAA3A1E69977100F03582 /* MTContact.swift */,
+			);
+			name = Model;
+			path = Classes/Model;
+			sourceTree = "<group>";
+		};
+		47EEAA3B1E69977100F03582 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				47EEAA291E6996EC00F03582 /* LaunchScreen.storyboard */,
+				47EEAA3C1E69977100F03582 /* MTContactCell.swift */,
+				47EEAA3D1E69977100F03582 /* MTContactCell.xib */,
+			);
+			name = View;
+			path = Classes/View;
+			sourceTree = "<group>";
+		};
+		47EEAA461E6997E200F03582 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				47EEAA471E6997EB00F03582 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47EEAA1C1E6996EC00F03582 /* PlivoDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47EEAA2F1E6996EC00F03582 /* Build configuration list for PBXNativeTarget "PlivoDemo" */;
+			buildPhases = (
+				47EEAA191E6996EC00F03582 /* Sources */,
+				47EEAA1A1E6996EC00F03582 /* Frameworks */,
+				47EEAA1B1E6996EC00F03582 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlivoDemo;
+			productName = PlivoDemo;
+			productReference = 47EEAA1D1E6996EC00F03582 /* PlivoDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		47EEAA151E6996EC00F03582 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Rostyslav.Stepanyak;
+				TargetAttributes = {
+					47EEAA1C1E6996EC00F03582 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = RX28V7FJK4;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 47EEAA181E6996EC00F03582 /* Build configuration list for PBXProject "PlivoDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 47EEAA141E6996EC00F03582;
+			productRefGroup = 47EEAA1E1E6996EC00F03582 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47EEAA1C1E6996EC00F03582 /* PlivoDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47EEAA1B1E6996EC00F03582 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47EEAA2B1E6996EC00F03582 /* LaunchScreen.storyboard in Resources */,
+				47EEAA261E6996EC00F03582 /* Main.storyboard in Resources */,
+				47EEAA481E6997EB00F03582 /* Assets.xcassets in Resources */,
+				47EEAA451E69977100F03582 /* MTContactCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47EEAA191E6996EC00F03582 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C7CFC41E699B7D00BA185D /* Phone.m in Sources */,
+				47C7CFDC1E69A16300BA185D /* MTConstants.swift in Sources */,
+				47EEAA421E69977100F03582 /* MTHomeViewController.swift in Sources */,
+				47EEAA411E69977100F03582 /* MTContactsViewController.swift in Sources */,
+				47EEAA441E69977100F03582 /* MTContactCell.swift in Sources */,
+				47EEAA3F1E69977100F03582 /* MTExtensions.swift in Sources */,
+				47EEAA401E69977100F03582 /* MTCallViewController.swift in Sources */,
+				47EEAA211E6996EC00F03582 /* AppDelegate.swift in Sources */,
+				47C7CFE41E69A3AB00BA185D /* MTCallManager.m in Sources */,
+				47EEAA431E69977100F03582 /* MTContact.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		47EEAA241E6996EC00F03582 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47EEAA251E6996EC00F03582 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		47EEAA291E6996EC00F03582 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47EEAA2A1E6996EC00F03582 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47EEAA2D1E6996EC00F03582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		47EEAA2E1E6996EC00F03582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47EEAA301E6996EC00F03582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RX28V7FJK4;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/PlivoDemo/Classes/Common/Vendor/Headers/**";
+				INFOPLIST_FILE = PlivoDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PlivoDemo/Classes/Common/Vendor",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dm.test.PlivoDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PlivoDemo/Classes/PlivoDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		47EEAA311E6996EC00F03582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RX28V7FJK4;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/PlivoDemo/Classes/Common/Vendor/Headers/**";
+				INFOPLIST_FILE = PlivoDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PlivoDemo/Classes/Common/Vendor",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dm.test.PlivoDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PlivoDemo/Classes/PlivoDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47EEAA181E6996EC00F03582 /* Build configuration list for PBXProject "PlivoDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47EEAA2D1E6996EC00F03582 /* Debug */,
+				47EEAA2E1E6996EC00F03582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47EEAA2F1E6996EC00F03582 /* Build configuration list for PBXNativeTarget "PlivoDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47EEAA301E6996EC00F03582 /* Debug */,
+				47EEAA311E6996EC00F03582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 47EEAA151E6996EC00F03582 /* Project object */;
+}

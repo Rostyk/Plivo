@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7Uj-bf-dZL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Oqm-ux-agb">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="7Uj-bf-dZL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sEX-jL-klh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oAr-Li-SWH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lxO-Ci-JuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-655" y="296"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MTHomeViewController" customModule="PlivoDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDl-Mm-UYe">
+                                <rect key="frame" x="88.5" y="312.5" width="198" height="42"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="26"/>
+                                <state key="normal" title="Show me contacts">
+                                    <color key="titleColor" red="0.095764857803661008" green="0.18907112076721072" blue="0.33825904130935669" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTouchShowMeContactsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2nt-eD-0CN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fDl-Mm-UYe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h17-6C-eo5"/>
+                            <constraint firstItem="fDl-Mm-UYe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="leG-6x-mjh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vOr-7S-XWj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="305"/>
+        </scene>
+        <!--Call View Controller-->
+        <scene sceneID="Bii-G2-oZM">
+            <objects>
+                <viewController id="frK-Io-WsF" customClass="MTCallViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kmo-Ym-6rp"/>
+                        <viewControllerLayoutGuide type="bottom" id="bnl-2M-dzZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kw4-8c-eNk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="call-bg" translatesAutoresizingMaskIntoConstraints="NO" id="YkJ-WY-FyR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ha9-C2-FHw">
+                                <rect key="frame" x="59" y="228" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="Oge-zk-R8q"/>
+                                    <constraint firstAttribute="width" constant="72" id="Vgf-rJ-5oB"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="call-mute"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHm-Kq-NYH">
+                                <rect key="frame" x="243" y="228" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="GUf-l2-awV"/>
+                                    <constraint firstAttribute="height" constant="72" id="SSM-a2-5Ym"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="call-speaker"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTj-cA-8Kk">
+                                <rect key="frame" x="151" y="228" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="QqB-5N-cjR"/>
+                                    <constraint firstAttribute="width" constant="72" id="eA8-ZA-C9w"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="call-keypad"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+971558249501" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhG-SS-thg">
+                                <rect key="frame" x="48" y="103" width="279" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="D5Q-6r-Png"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24m-D5-0P7">
+                                <rect key="frame" x="151" y="371" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="A5C-tq-ZwN"/>
+                                    <constraint firstAttribute="height" constant="72" id="TvA-do-xNq"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="call-reject"/>
+                                <connections>
+                                    <action selector="rejectCallButtonClicked:" destination="frK-Io-WsF" eventType="touchUpInside" id="6V1-bR-Cm2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YkJ-WY-FyR" firstAttribute="top" secondItem="Kw4-8c-eNk" secondAttribute="top" id="0HE-Yl-Xq3"/>
+                            <constraint firstAttribute="trailing" secondItem="YkJ-WY-FyR" secondAttribute="trailing" id="6UQ-Zq-aQb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RhG-SS-thg" secondAttribute="trailing" constant="32" id="A2W-eK-Pxd"/>
+                            <constraint firstItem="VTj-cA-8Kk" firstAttribute="top" secondItem="RhG-SS-thg" secondAttribute="bottom" constant="99" id="Jf1-Yc-Syb"/>
+                            <constraint firstItem="VTj-cA-8Kk" firstAttribute="centerX" secondItem="Kw4-8c-eNk" secondAttribute="centerX" id="SbO-Zx-vhO"/>
+                            <constraint firstItem="RhG-SS-thg" firstAttribute="leading" secondItem="Kw4-8c-eNk" secondAttribute="leadingMargin" constant="32" id="X2U-7P-lh7"/>
+                            <constraint firstItem="XHm-Kq-NYH" firstAttribute="leading" secondItem="VTj-cA-8Kk" secondAttribute="trailing" constant="20" id="aIy-aY-hlN"/>
+                            <constraint firstItem="YkJ-WY-FyR" firstAttribute="leading" secondItem="Kw4-8c-eNk" secondAttribute="leading" id="jYA-at-PP9"/>
+                            <constraint firstItem="XHm-Kq-NYH" firstAttribute="top" secondItem="RhG-SS-thg" secondAttribute="bottom" constant="99" id="kG7-Id-Jhz"/>
+                            <constraint firstItem="RhG-SS-thg" firstAttribute="top" secondItem="kmo-Ym-6rp" secondAttribute="bottom" constant="83" id="nuz-Aa-Pfe"/>
+                            <constraint firstItem="bnl-2M-dzZ" firstAttribute="top" secondItem="YkJ-WY-FyR" secondAttribute="bottom" id="nxM-zw-Al9"/>
+                            <constraint firstItem="24m-D5-0P7" firstAttribute="centerX" secondItem="Kw4-8c-eNk" secondAttribute="centerX" id="s7p-nI-gIU"/>
+                            <constraint firstItem="24m-D5-0P7" firstAttribute="top" secondItem="VTj-cA-8Kk" secondAttribute="bottom" constant="71" id="uYg-2P-v37"/>
+                            <constraint firstItem="VTj-cA-8Kk" firstAttribute="leading" secondItem="ha9-C2-FHw" secondAttribute="trailing" constant="20" id="x1P-mF-vXD"/>
+                            <constraint firstItem="ha9-C2-FHw" firstAttribute="top" secondItem="RhG-SS-thg" secondAttribute="bottom" constant="99" id="yVt-ao-eRe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="callKeypadButton" destination="VTj-cA-8Kk" id="nDU-Zu-Qx2"/>
+                        <outlet property="callMuteButton" destination="ha9-C2-FHw" id="23D-Xn-WUL"/>
+                        <outlet property="callSpeakerButton" destination="XHm-Kq-NYH" id="cgf-GD-fAF"/>
+                        <outlet property="recipientLabel" destination="RhG-SS-thg" id="KC8-v0-eea"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1cy-yF-G1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="909.60000000000002" y="303.59820089955025"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="call-bg" width="375" height="666"/>
+        <image name="call-keypad" width="145" height="145"/>
+        <image name="call-mute" width="145" height="145"/>
+        <image name="call-reject" width="144" height="144"/>
+        <image name="call-speaker" width="145" height="145"/>
+    </resources>
+</document>
