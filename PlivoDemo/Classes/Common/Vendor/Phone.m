@@ -34,7 +34,7 @@
 
 - (PlivoOutgoing *)callWithDest:(NSString *)dest andHeaders:(NSDictionary *)headers
 {
-    NSString *cleanedPhoneNumber = [[dest componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"0123456789"] invertedSet]] componentsJoinedByString:@""];
+    NSString *cleanedPhoneNumber = [[dest componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"0123456789+"] invertedSet]] componentsJoinedByString:@""];
     /* construct SIP URI */
     NSString *sipUri = [[NSString alloc]initWithFormat:@"sip:%@@phone.plivo.com", cleanedPhoneNumber];
     

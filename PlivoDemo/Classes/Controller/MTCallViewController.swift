@@ -109,8 +109,14 @@ extension MTCallViewController : CallDelegate {
 
     func appendLog(_ log: String) {
         DispatchQueue.main.async {
-            self.logTextView.text = (self.logTextView.text)! + "[Plivo]" + log
-            self.callStatusLabel.text = log
+            if let logView = self.logTextView {
+                logView.text = logView.text + "[Plivo]" + log
+            }
+            
+            if let logStatus = self.callStatusLabel {
+                logStatus.text = log
+            }
+            
         }
     }
 }
